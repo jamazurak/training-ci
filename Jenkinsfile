@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'gnode01'
+    }
+
+  }
   stages {
     stage('Echo some text') {
       steps {
