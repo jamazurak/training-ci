@@ -6,9 +6,12 @@ pipeline {
         sh 'echo "Hello!"'
       }
     }
-    stage('error') {
+    stage('') {
       steps {
-        git(url: 'https://github.com/jamazurak/training-ci', branch: 'jenkins', credentialsId: '5a:72:b3:ef:59:a6:62:4b:e8:8a:f6:07:c3:d2:ba:82')
+        dir(path: 'flask-app') {
+          sh 'docker-compose up -d --build'
+        }
+
       }
     }
   }
