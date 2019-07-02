@@ -6,7 +6,7 @@ pipeline {
         sh 'echo "Hello!"'
       }
     }
-    stage('') {
+    stage('Run app') {
       steps {
         dir(path: 'flask-app') {
           sh 'docker-compose up -d --build'
