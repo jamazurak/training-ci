@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'gnode01'
+      label 'instance-1'
     }
 
   }
