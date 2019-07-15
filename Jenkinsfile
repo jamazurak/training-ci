@@ -33,6 +33,7 @@ docker-compose down'''
     stage('Archive JUnit-formatted test results') {
       steps {
         junit 'flask-app/junit-report/report.xml'
+        sh 'sudo rm -rf flask-app/junit-report'
       }
     }
   }
