@@ -1,2 +1,1 @@
-Testing Build Trigger
-build_trigger
+Build trigger demo file
